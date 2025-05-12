@@ -1,0 +1,38 @@
+<header class="header">
+  <nav class="nav container">
+
+    <a class="logo" href="/"> 
+      <img 
+        class="logo__img" 
+        src="./img/logo/logo.webp" 
+        srcset="./img/logo/logo.webp ,
+                ./img/logo/logo-x2.webp 2x"
+        alt="{{siteName}} Logo" 
+        width="391" 
+        height="70"
+      />
+    </a>
+
+    <ul id="main-menu" class="nav__list" aria-label="Main menu">
+      {{#each headerMenuItems }}
+        <li>
+          <a href="{{ url }}" class="nav__link">{{ text }}</a>
+        </li>
+      {{/each }}
+    </ul>
+
+    <button 
+      class="nav__burger burger" 
+      type="button"
+      aria-label="Open menu" 
+      aria-expanded="false" 
+      aria-controls="main-menu"
+    >
+      <div class="burger__icon">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </div>
+    </button>
+  </nav>
+</header>

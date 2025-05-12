@@ -1,0 +1,32 @@
+<footer class="footer">
+  <div class="footer__inner container">
+    <a class="footer__logo logo logo--footer" href="/">
+      <img 
+        class="logo__img logo__img--footer" 
+        src="./img/logo/logo.webp"
+        srcset="./img/logo/logo.webp ,
+                ./img/logo/logo-x2.webp 2x"
+        alt="{{siteName}} Logo" 
+        width="391"
+        height="70"
+      />
+    </a>
+    <address id="contacts" class="footer__contacts">
+      <p class="footer__contacts-column footer__address">
+        <span class="footer__caption">Dirección:</span>
+        27 Willow Crescent
+        <span class="footer__caption">Ciudad:</span>
+        Valencia, 46021
+      </p>
+      <p class="footer__contacts-column footer__email">
+        <span class="footer__caption">Correo electrónico:</span> 
+        <a href="mailto:support@{{ domain }}">support@{{ domain }}</a>
+      </p>
+      <p class="footer__contacts-column footer__phone">
+        <span class="footer__caption">Teléfono:</span> 
+        <a href="tel:+34961234567">+34 961 234 567</a>
+      </p>
+    </address>
+    <p class="footer__copy">©2025 {{ domain }}</p>
+  </div>
+</footer>

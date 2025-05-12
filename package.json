@@ -1,0 +1,45 @@
+{
+	"name": "template",
+	"private": true,
+	"version": "0.1.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --host",
+		"debug": "vite --debug",
+		"force": "vite --force",
+		"build": "vite build && stylelint \"**/*.scss\"",
+		"preview": "vite preview --host",
+		"gulp": "gulp",
+		"check": "prettier --check './src/**/*.{html,scss,js}'",
+		"format": "prettier --write './src/**/*.{html,scss,js}'",
+		"lint": "stylelint './src/**/*.scss'",
+		"lintfix": "stylelint './src/**/*.scss' --fix",
+		"checkAll": "npm run check && npm run lint",
+		"fixAll": "npm run format && npm run lintfix",
+		"webp": "for file in ./public/img/*.png; do cwebp -q 85 \"$file\" -o \"${file%.*}.webp\"; done"
+	},
+	"devDependencies": {
+		"@vue/compiler-sfc": "^3.5.13",
+		"autoprefixer": "^10.4.20",
+		"gulp": "^4.0.2",
+		"gulp-ttf2woff": "^1.1.1",
+		"gulp-ttftowoff2": "^1.0.1",
+		"postcss": "^8.4.47",
+		"prettier": "^3.5.3",
+		"sass": "^1.62.1",
+		"stylelint-config-standard-scss": "^9.0.0",
+		"stylelint-scss": "^5.0.0",
+		"terser": "^5.17.3",
+		"vite": "^5.4.2",
+		"vite-plugin-handlebars": "^2.0.0",
+		"vite-plugin-html": "^3.2.2",
+		"vite-plugin-pages": "^0.32.5"
+	},
+	"browserslist": [
+		"last 2 versions",
+		"> 5%",
+		"not ie <= 11",
+		"not op_mini all",
+		"not dead"
+	]
+}

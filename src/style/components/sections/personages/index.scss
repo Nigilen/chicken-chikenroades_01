@@ -1,0 +1,75 @@
+.personages {
+  background-color: var(--color-bg-secondary);
+  
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 40px;
+    justify-content: center;
+  }
+
+  &__item {
+    flex-basis: 100%;
+  }
+
+  @include media-xl {
+    &__item {
+      flex-basis: calc(33.333% - 40px);
+    }
+  }
+}
+
+.personage {
+  padding: 24px;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--border-radius-primary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-inline-size: 360px;
+
+  &__img {
+    margin-inline: auto;
+    inline-size: 100%;
+    block-size: auto;
+    max-inline-size: 120px;
+    max-block-size: 120px;
+    border-radius: 100px;
+  }
+
+  &__title {
+    font-size: var(--size-h3-primary);
+    line-height: 1;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: var(--size-p-primary);
+    line-height: 1.3;
+    color: var(--color-text-secondary);
+  }
+
+  &__abilities {
+    font-weight: 400;
+    font-size: var(--size-p-primary);
+    line-height: 1.3;
+    list-style: disc;
+    margin-inline-start: 1.5em;
+    color: var(--color-text-secondary);
+  }
+
+  @include media-md {
+    gap: 16px;
+    padding: 32px;
+
+    &__img {
+      max-inline-size: 180px;
+      max-block-size: 180px;
+    }
+
+    &__abilities {
+      margin-block-start: auto;
+    }
+  }
+}

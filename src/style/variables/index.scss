@@ -1,0 +1,27 @@
+@import "@s/mixin";
+
+:root {
+  --color-text-primary: #191919;
+  --color-text-secondary: #4D4D4D;
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #C5EFFF;
+  --border-color: #B7D3E4;
+  --shadow-color: #2977C040;
+  --border-radius-primary: 24px;
+  --border-radius-secondary: 16px;
+  --font-primary: "Montserrat";
+  --size-p-primary: 1rem;
+  --size-menu: 1.125rem;
+  --size-h1-primary: 2rem;
+  --size-h2-primary: 2rem;
+  --size-h3-primary: 1.25rem;
+  
+  @include media-md {
+    --size-p-primary: 1.125rem;
+    --size-h1-primary: 3.25rem;
+    --size-h2-primary: 3rem;
+    --size-h3-primary: 1.75rem;
+    }
+  }
+
+  

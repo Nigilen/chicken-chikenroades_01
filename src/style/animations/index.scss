@@ -1,0 +1,8 @@
+%link-transition {
+  transition-property: color;
+  transition-duration: .3s;
+  
+  &:not(.button):hover {
+    color: #4b4b4bb3;
+  }
+}

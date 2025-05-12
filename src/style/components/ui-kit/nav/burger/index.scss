@@ -1,0 +1,34 @@
+$burger-width: 18px;
+$block-height: 12px;
+$line-width: 1.5px;
+
+.burger {
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    inline-size: $burger-width;
+    block-size: $block-height;
+  }
+
+  &__line {
+    inline-size: 100%;
+    block-size: $line-width;
+    background-color: var(--color-text-primary);
+    border-radius: 999px;
+
+    @include transition(0.3s, transform opacity background-color);
+  }
+
+  &--open &__line:nth-of-type(1) {
+    transform: translateY(calc(($block-height - $line-width) / 2)) rotate(45deg);
+  }
+
+  &--open &__line:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  &--open &__line:nth-of-type(3) {
+    transform: translateY(calc(($line-width - $block-height) / 2)) rotate(-45deg);
+  }
+}

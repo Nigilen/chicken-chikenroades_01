@@ -1,0 +1,11 @@
+.header {
+  position: fixed;
+  inline-size: 100%;
+  inset-block-start: 0;
+  z-index: 10;
+
+  @include media-md {
+    position: static;
+    background-color: var(--color-bg-secondary);
+  }
+}

@@ -1,0 +1,24 @@
+.logo {
+  max-inline-size: 200px;
+  max-block-size: 36px;
+  
+  &__img {
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  &--footer {
+    max-inline-size: 299px;
+    max-block-size: 53px;
+  }
+    
+  @include media-md {
+    max-inline-size: 391px;
+    max-block-size: 70px;
+
+    &--footer {
+      max-inline-size: 391px;
+      max-block-size: 70px;
+    }
+  }
+}

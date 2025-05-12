@@ -1,0 +1,31 @@
+@import "breakpoints";
+
+@mixin media-md {
+  @media all and (min-width: $md-size) {
+    @content
+  }
+}
+
+@mixin media-lg {
+  @media all and (min-width: $lg-size) {
+    @content
+  }
+}
+
+@mixin media-xl {
+  @media all and (min-width: $xl-size) {
+    @content
+  }
+}
+
+@mixin media-xxl {
+  @media all and (min-width: $xxl-size) {
+    @content
+  }
+}
+
+@mixin transition($duration, $property...) {
+  transition-property: $property;
+  transition-timing-function: ease-in-out;
+  transition-duration: $duration;
+}
